@@ -61,6 +61,50 @@ h1{
     border: 2px solid rgb(230, 61, 81);
 }
 
+.blocs{
+    background-color: rgb(127, 157, 195);
+    border: 2px solid rgb(171, 61, 230);
+}
+
+.bloc-static-left{
+    position: relative;
+    margin: 40px 80px;
+    width: fit-content;
+}
+
+.bloc-static-right {
+    position: relative;
+    margin: 40px 500px;
+    width: fit-content;
+}
+
+.bloc-static-left p,
+.bloc-static-right p {
+    width: 500px;
+    background-color: azure;
+    height: auto;
+    padding: 50px;
+    text-align: justify;
+    border: 2px solid rgb(86, 61, 230);
+    border-radius: 20px;
+    margin: 0;
+}
+
+.bloc-static-left h3,
+.bloc-static-right h3 {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    background-color: rgb(86, 61, 230);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 2;
+}
+
+
+
 
 
 
