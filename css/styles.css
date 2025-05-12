@@ -1,24 +1,33 @@
-header, footer{
-    text-align: center;
-    padding:15px;
+
+nav {
+  display: flex;    
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgb(230, 148, 61);
+  font-size: 20px;
 }
 
-nav{
-    display: flex;   
-    border: 2px solid rgb(230, 148, 61);
-    justify-content: center;
-    gap: 40px; 
+nav, footer{
     padding: 10px;
     margin: 10px;
-    font-size: 20px;
+    border: 2px solid rgb(230, 148, 61);
+}
+
+.right-links {
+  display: flex;
+  gap: 20px;
+}
+
+a:hover {
+    color: rgba(255, 144, 25, 0.551);
+    font: none;
+    border-radius: 10px;
 }
 
 a{
-    color : rgb(255, 255, 255);
-    text-decoration:none;
+    text-decoration: none;
 }
 
-a:hover{
-    background-color: rgba(255, 144, 25, 0.551);
-    border-radius: 10px;
+footer{
+    text-align: center;
 }
