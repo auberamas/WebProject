@@ -22,6 +22,7 @@ footer{
 }
 
 .right-links {
+  border: 2px solid rgb(61, 230, 199);
   display: flex;
   gap: 20px;
 }
@@ -29,7 +30,6 @@ footer{
 a:hover {
     color: rgba(255, 144, 25, 0.551);
     font: none;
-    border-radius: 10px;
 }
 
 a{
@@ -129,6 +129,19 @@ h1{
     z-index: 2;
 }
 
+#logo{
+    background-image: url('../img/logo_blue_png_without.png');
+    width :100px;
+    height: 50px;
+    background-size: cover;
+}
+
+#logo:hover {
+    background-image: url('../img/logo_blue_without_inverse.png');
+    width :100px;
+    height: 50px;
+    background-size: cover;
+}
 
 
 
