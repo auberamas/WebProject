@@ -8,6 +8,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   border: 2px solid rgb(230, 148, 61);
+  background-color: rgba(22, 69, 95, 0.505);
   font-size: 20px;
 }
 
@@ -61,21 +62,46 @@ h1{
     border: 2px solid rgb(230, 61, 81);
 }
 
-.blocs{
+.blocs {
+    display: flex;
+    flex-wrap: wrap; /* go in column for small screens */
+    justify-content: center;
+    gap: 40px;
     background-color: rgb(127, 157, 195);
     border: 2px solid rgb(171, 61, 230);
+    padding: 40px 0px;
 }
 
-.bloc-static-left{
-    position: relative;
-    margin: 40px 80px;
-    width: fit-content;
-}
 
+.bloc-static-left,
 .bloc-static-right {
     position: relative;
-    margin: 40px 500px;
     width: fit-content;
+}
+
+#imgright,
+#imgleft{
+    border: 2px solid rgb(86, 61, 230);
+    background-image: url('../img/coral.jpg');
+    background-size: cover;
+    width: 200px;
+    height: auto;
+    flex: 1;
+    background-position: center;
+}
+
+#imgleft{
+    padding-left: 80px;
+}
+
+#imgright{
+    padding-right: 80px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  gap: 20px; /* espace entre les deux blocs */
 }
 
 .bloc-static-left p,
