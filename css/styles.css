@@ -7,14 +7,13 @@ nav {
   display: flex;    
   align-items: center;
   justify-content: space-between;
-  border: 2px solid rgb(230, 148, 61);
   background-color: rgba(22, 69, 95, 0.505);
   font-size: 20px;
 }
 
 nav, footer{
     padding: 10px;
-    border: 2px solid rgb(230, 148, 61);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 
 footer{
@@ -22,13 +21,19 @@ footer{
 }
 
 .right-links {
-  border: 2px solid rgb(61, 230, 199);
   display: flex;
   gap: 20px;
 }
-
-a:hover {
+nav a, #topics li a{
+    color :rgb(223, 249, 255)
+}
+nav a:hover{
     color: rgba(255, 144, 25, 0.551);
+    font: none;
+}
+
+#topics li a:hover{
+    color: rgb(129, 16, 74);
     font: none;
 }
 
@@ -36,12 +41,21 @@ a{
     text-decoration: none;
 }
 
-#topics{
-    display:none;
+#topics {
+    display: none;
+    position: absolute;
+    background-color: rgba(22, 69, 95, 0.505);
+    padding:10px;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-#marine-life:hover #topics{
-    display:block;
+#marine-life:hover #topics {
+    display: block;
+}
+
+#topics li {
+    transition: color 0.3s ease;
 }
 
 #marine-life ul{
@@ -52,7 +66,6 @@ a{
     position: relative;
     height: 100vh;
     width: 100%;
-    border: 2px solid rgb(230, 61, 154);
     overflow: hidden;
 }
 
@@ -66,34 +79,42 @@ a{
     z-index: -1;
 }
 
-h1{ 
+.Name { 
     color: aliceblue;
-    font-style: oblique;
-    font-size: 100px;
     text-align: center;
-    border: 2px solid rgb(230, 61, 81);
+    margin-top: 180px;
+}
+
+.title span {
+  font-size: 2em;
+  letter-spacing: 2px;
+  color: white;
 }
 
 .divider{
     background-color: aliceblue;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
+    color:rgb(19, 92, 106);
+    font-size: 20px;
+    font-style: oblique; 
 }
 
-.divider p{
-   font-style: oblique; 
-   font-size: 50px;
-   
-   
+section{
+    background-image: url('../img/oceansand.jpg');
+    background-size: cover;
+    background-position: center;
 }
-
 .row {
     display: flex;
     align-items: stretch;
     width: 100%;
     height: 400px;
-    background-color: rgb(127, 157, 195);
     overflow-x: hidden;
+}
+
+.bloc:hover p, .bloc:hover h3{
+    color:rgb(230, 148, 61);
 }
 
 .bloc {
@@ -103,12 +124,15 @@ h1{
   /*opacity: 0;*/
   transition: all 2s ease-in-out;
   padding: 40px;
-  align-items: center;
-  background-color: azure;
+  background-color: rgba(240, 255, 255, 0.678);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*verticaly centered*/
 }
 
 .bloc p, .bloc h3{
     text-align: justify;
+    color: rgb(66, 66, 127); 
 }
 
 .left {
@@ -137,18 +161,48 @@ h1{
 .img{
     background-size: cover;
     background-position: center;
+    filter: grayscale(0.4);
+    overflow: hidden;
+    z-index: 0;
 }
 
 #imgcoral{
     background-image: url('../img/coral.jpg');
 }
 
+#imgcoral p, #imgjellyfish p, #imgturtle p{
+    color: black;
+    font-size: 24px;
+    padding: 20px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; /* to cover all the img */
+    top: 0;
+    left: 0;
+    font-size: 30px;
+}
+
+#imgcoral:hover p, #imgjellyfish:hover p, #imgturtle:hover p{
+    opacity: 1;
+    background-color: rgba(134, 184, 248, 0.52);
+    padding: auto;
+    z-index: 1;
+}
+
+
+
+
 #imgjellyfish{
-    background-image: url('../img/pexels-jeremy-bishop-1260133-2397651.jpg');
+    background-image: url('../img/jellyfish2.jpg');
 }
 
 #imgturtle{
-    background-image: url('../img/pexels-kammeran-gonzalez-keola-3137381-30391119.jpg');
+    background-image: url('../img/turtle.jpg');
 }
 
 #logo{
