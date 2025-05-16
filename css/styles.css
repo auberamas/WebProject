@@ -36,7 +36,19 @@ a{
     text-decoration: none;
 }
 
-.bloc-video {
+#topics{
+    display:none;
+}
+
+#marine-life:hover #topics{
+    display:block;
+}
+
+#marine-life ul{
+    list-style: none;
+}
+
+.animated-background {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -44,7 +56,7 @@ a{
     overflow: hidden;
 }
 
-.bloc-video video{
+.animated-background video{
     position: absolute;
     top: 0;
     left: 0;
@@ -62,71 +74,80 @@ h1{
     border: 2px solid rgb(230, 61, 81);
 }
 
-.blocs {
-    display: flex;
-    flex-wrap: wrap; /* go in column for small screens */
-    justify-content: center;
-    gap: 40px;
-    background-color: rgb(127, 157, 195);
-    border: 2px solid rgb(171, 61, 230);
-    padding: 40px 0px;
+.divider{
+    background-color: aliceblue;
+    padding: 40px;
 }
 
-
-.bloc-static-left,
-.bloc-static-right {
-    position: relative;
-    width: fit-content;
-}
-
-#imgright,
-#imgleft{
-    border: 2px solid rgb(86, 61, 230);
-    background-image: url('../img/coral.jpg');
-    background-size: cover;
-    width: 200px;
-    height: auto;
-    flex: 1;
-    background-position: center;
-}
-
-#imgleft{
-    padding-left: 80px;
-}
-
-#imgright{
-    padding-right: 80px;
+.divider p{
+   font-style: oblique; 
+   font-size: 50px;
+   justify-content: center;
+   
 }
 
 .row {
-  display: flex;
-  width: 100%;
-  gap: 20px; /* espace entre les deux blocs */
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(127, 157, 195);
+    overflow-x: hidden;
 }
 
-.bloc-static-left p,
-.bloc-static-right p {
-    width: 500px;
-    background-color: azure;
-    height: auto;
-    padding: 50px;
+.bloc {
+  width: 50%;
+  position: relative;
+  top: 0;
+  /*opacity: 0;*/
+  transition: all 2s ease-in-out;
+}
+
+.left {
+  left: -50%;
+}
+
+.right {
+  right: -50%;
+}
+
+
+.bloc.left.visible {
+  left: 0;
+}
+
+.bloc.right.visible {
+  right: 0;
+}
+
+/*
+.active{
+    opacity: 1;
+    transform: scale(1);
+}*/
+
+.img{
+    background-image: url('../img/coral.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.text > * {
     text-align: justify;
-    border: 2px solid rgb(86, 61, 230);
-    border-radius: 20px;
-    margin: 0;
+    margin-left:40px;
+    margin-right: 40px;
 }
 
-.bloc-static-left h3,
-.bloc-static-right h3 {
-    position: absolute;
-    top: 10px;
-    right: -10px;
-    background-color: rgb(86, 61, 230);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 10px;
-    font-size: 16px;
-    z-index: 2;
+.text h3 {
+    margin-top: 40px;
+}
+
+.text p {
+    margin-bottom: 40px;
+}
+
+.text{
+    background-color: azure;
 }
 
 #logo{
@@ -147,3 +168,4 @@ h1{
 
 
 
+ 
