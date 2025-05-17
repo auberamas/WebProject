@@ -94,7 +94,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ------- button on Conctact Us pagae -------------------
+// ------- button on Conctact Us page -------------------
 
 const trigger = document.querySelector('.submit-btn');
 const target = document.querySelector('.ContactUs');
