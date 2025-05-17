@@ -12,9 +12,14 @@ nav {
   font-size: 20px;
 }
 
-nav, footer{
+nav{
     padding: 10px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+
+footer{
+    padding: 10px;
+    box-shadow: 0 -4px 4px rgba(0,0,0,0.2);
 }
 
 footer{
@@ -127,7 +132,7 @@ a{
     font-style: oblique; 
 }
 
-section{
+.home{
     background-image: url('../img/oceansand.jpg');
     background-size: cover;
     background-position: center;
@@ -295,7 +300,17 @@ section{
     text-bo
 }
 
+/*--------------- Learn pages -----------------------------------*/
 
+.text-container{
+    background-color: rgba(212, 239, 255, 0.942);
+    height: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 100px 60px;
+}
 
 
 
