@@ -82,14 +82,16 @@ window.addEventListener('scroll', () => {
 
     const screenPosition = window.innerHeight;
 
+    // check for each bloc their position compared to the screen one
     blocs.forEach(bloc => {
-    const position = bloc.getBoundingClientRect().top;
+        const position = bloc.getBoundingClientRect().top;
 
-    if (position < screenPosition - 100) {
-        bloc.classList.add('visible');
-    } else {
-        bloc.classList.remove('visible');
-    }
+        // change the class to make the bloc visible
+        if (position < screenPosition - 100) {
+            bloc.classList.add('visible');
+        } else {
+            bloc.classList.remove('visible');
+        }
     });
 });
 
@@ -99,14 +101,12 @@ window.addEventListener('scroll', () => {
 const trigger = document.querySelector('.submit-btn');
 const target = document.querySelector('.ContactUs');
 
-function myFunction() {
-  document.getElementById("myDIV").classList.toggle("myStyle");
-}
-
+// new class for the target when mouse on it
 trigger.addEventListener('mouseenter', () => {
   target.classList.add('active-button');
 });
 
+// remove the new class 
 trigger.addEventListener('mouseleave', () => {
   target.classList.remove('active-button');
 });

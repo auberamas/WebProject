@@ -167,6 +167,7 @@ a{
     color: rgb(66, 66, 127); 
 }
 
+/*to hide blocs*/
 .left {
   left: -50%;
 }
@@ -175,7 +176,7 @@ a{
   right: -50%;
 }
 
-
+/*to display blocs*/
 .bloc.left.visible {
   left: 0;
 }
