@@ -88,7 +88,7 @@ a{
     background-image: url('../img/logo_blue_without_inverse.png');
 }
 
-/*---------- home page -------------------------------------------------------*/
+/*---------- Video background -------------------------------------------------------*/
 
 /* *** upper part : video and title*** */
 
@@ -109,13 +109,15 @@ a{
     z-index: -1;
 }
 
+/*---------- home page -------------------------------------------------------*/
+
 .Name { 
     color: aliceblue;
     text-align: center;
     margin-top: 180px;
 }
 
-.title span {
+.main-title span {
   font-size: 2em;
   letter-spacing: 2px;
   color: white;
@@ -304,14 +306,49 @@ a{
 /*--------------- Learn pages -----------------------------------*/
 
 .text-container{
-    background-color: rgba(212, 239, 255, 0.942);
-    height: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 100px 60px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
+
+.text-container>*{
+    padding: 10px;
+    text-align: justify;
+}
+
+.LAML-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    height: 100%;
+}
+
+.LAML-title >*{
+    color:rgb(224, 235, 244);
+    margin-left: 100px;
+    padding-top:10px;
+}
+
+.LAML-title h1{
+    font-size: 80px;
+}
+
+.text-container h2{
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color:rgb(66, 66, 127);
+}
+
+.text-container h3{
+    margin:5px 0;
+}
+
+.text-container section{
+    margin:10px 0;
+}
+
+
+
 
 
 

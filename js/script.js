@@ -24,7 +24,7 @@ function move(visible) {
 // ---  animate the title -------------------------
 
 window.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".title");
+    const title = document.querySelector(".main-title");
     const fullText = title.textContent;
     const table = fullText.split("|"); // ["BLUE", "Bringing Life to Underwater Ecosystems"]
     const container = title;
