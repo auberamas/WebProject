@@ -94,3 +94,20 @@ window.addEventListener('scroll', () => {
 });
 
 
+// ------- button on Conctact Us pagae -------------------
+
+const trigger = document.querySelector('.submit-btn');
+const target = document.querySelector('.ContactUs');
+
+function myFunction() {
+  document.getElementById("myDIV").classList.toggle("myStyle");
+}
+
+trigger.addEventListener('mouseenter', () => {
+  target.classList.add('active-button');
+});
+
+trigger.addEventListener('mouseleave', () => {
+  target.classList.remove('active-button');
+});
+

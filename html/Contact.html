@@ -8,10 +8,11 @@
     </head>
     
     <body>
-        <header>
+        <div class="animated-background">
+            <header>
                 <nav>
-                    <a href="./Home.html" id="logo" class="home"></a>
-                    <div class="right-links">
+                <a href="./Home.html" id="logo" class="home"></a>
+                <div class="right-links">
                         <div id="marine-life">
                             <a href="./LearnAboutMarineLife.html">Learn About Marine Life</a>
                             <ul id="topics">
@@ -19,14 +20,30 @@
                                 <li><a href="./Jellyfish.html">Jelly fish</a></li>
                                 <li><a href="./Turtle.html">Turtle</a></li>
                             </ul>
-                    </div>
+                        </div>
 
                     <a href="./Contact.html">Contact</a>
                     <a href="./Quizz.html">Quizz</a>
                     <a href="./AboutUs.html">About us</a>
                 </div>
                 </nav>
-        </header>
+            </header>
+
+            <video autoplay muted loop src ="../video/oceanfloor.mp4"></video>
+
+            <form class="form-container">
+                <h1 class="ContactUs">Contact Us</h1>
+                <div class="form-row">
+                    <input type="text" placeholder="Name *" class="user-info" required/>
+                    <input type="email" placeholder="Email *" class="user-info" required/>
+                </div>
+
+                <textarea placeholder="message" class="msg" required></textarea>
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+            
+
+        </div>
 
         <footer>
             ©️2025 Sophie Jaffal & Aube Ramassamy<br>
