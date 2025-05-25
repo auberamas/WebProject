@@ -1,26 +1,3 @@
-/*
-var visible = false;
-
-function move(visible) {
-    const leftblocs = document.querySelectorAll('.left');
-    const rightblocs = document.querySelectorAll('.right');
-    
-     if (visible) {
-        // Hidde the blocs
-        leftblocs.forEach(bloc => bloc.style.left = '-50%');
-        rightblocs.forEach(bloc => bloc.style.right = '-50%');
-        visible = false;
-
-    } else {
-        // Make the blocs visible
-        leftblocs.forEach(bloc => bloc.style.left = '0');
-        rightblocs.forEach(bloc => bloc.style.right = '0');
-        visible = true;
-    }
-    
-}
-*/
-
 // ---  animate the title -------------------------
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -72,8 +49,6 @@ window.addEventListener("DOMContentLoaded", () => {
     animateText();
 });
 
-
-
 // ---- to move the blocks when scrolling -----------------
 
 window.addEventListener('scroll', () => {
@@ -96,18 +71,4 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ------- button on Conctact Us page -------------------
-
-const trigger = document.querySelector('.submit-btn');
-const target = document.querySelector('.ContactUs');
-
-// new class for the target when mouse on it
-trigger.addEventListener('mouseenter', () => {
-  target.classList.add('active-button');
-});
-
-// remove the new class 
-trigger.addEventListener('mouseleave', () => {
-  target.classList.remove('active-button');
-});
 

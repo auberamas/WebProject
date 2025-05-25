@@ -5,7 +5,7 @@
         <title> Quizz </title>
         <link rel= "stylesheet" href="../css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="../js/script.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     
     <body>
@@ -29,11 +29,48 @@
             </nav>
         </header>
 
+        <div class="quizz">
+            <div class="begin-quizz container">
+                <h3>What do you know about marine life ?</h3>                     
+                <div class="img-quizz start"></div>
+                
+                <button class="start-quizz-btn">Start quizz</button>
+            </div>
+
+            <div class="quizz-content container">
+                <div class="quizz-header">
+                    <h3 class="quizz-title">Marine life quiz</h3>
+                    <div class="timer">
+                        <i class="material-icons" style="color:rgb(129, 173, 212)">timer</i>
+                        <p class="time">15s</p>
+                    </div>
+                </div>
+                <h3 class="question"></h3>
+                <ul class="answer-options"></ul>
+                <div class="quizz-footer">
+                    <p class="question-status" ></p>
+                    <button class="next-question">Next question
+                        <i class="material-icons">arrow_right_alt</i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="end-quizz container">
+                <h3>Quiz completed !</h3>   
+                <div class="img-quizz end"></div>
+                <p>You got <span class="nb-right-answer">?</span> good answers over <b>10</b></p>
+                <button class="try-again"> Try again</button>
+
+            </div>
+            
+        </div>
         <footer>
             ©️2025 Sophie Jaffal & Aube Ramassamy<br>
             All rights reserved.
         </footer>
-        <script type="text/javascript" src="../js/script.js"></script>
+        <script type="text/javascript" src="../js/questions.js"></script>
+        <script type="text/javascript" src="../js/quizz_script.js"></script>
     </body>
 
 </html>
