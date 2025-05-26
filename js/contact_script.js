@@ -15,3 +15,26 @@ if(trigger && target){
     });
 
 }
+
+// ------ send and clear the form --------------------
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // prevent auto reload
+
+  // send HTTP request
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form)
+  })
+
+  // manage the answer
+  .then(res => res.ok ? res.json() : Promise.reject())
+  .then(() => {
+    alert("Message sent!");
+    form.reset(); // reinitialize the form
+  })
+  .catch(() => {
+    alert("Error sending message.");
+  });
+});

@@ -1,16 +1,57 @@
+const beginContainer = document.querySelector(".begin-quizz");
+const quizzContainer = document.querySelector(".quizz-content");
 const answerOptions = document.querySelector(".answer-options");
 const nextQuestionBtn = document.querySelector(".next-question");
 const questionStatus = document.querySelector(".question-status");
+const timerDisplay = document.querySelector(".time-duration");
+const resultContainer = document.querySelector(".end-quizz");
 
+const QUIZ_TIME_LIMIT = 5;
+let currentTime = QUIZ_TIME_LIMIT;
+let timer = null;
 let currentQuestion = null;
 let numberOfQuestions = 10;
 const questionIndexHistory=[];
+let correctAnswerCount = 0;
+
+// display the quizz result and hide the quizz container
+const showQuizzResult = () =>{
+    quizzContainer.style.display = "none";
+    resultContainer.style.display = "flex";
+
+    const resultMessage = `You got <b>${correctAnswerCount}</b> good answers over <b>${numberOfQuestions} ! </b>`;
+    document.querySelector(".result-message").innerHTML = resultMessage; 
+}
+
+// clear and reset the timer
+const resetTimer=()=>{
+    clearInterval(timer);
+    currentTime = QUIZ_TIME_LIMIT;
+    timerDisplay.textContent = `${currentTime}s`;
+}
+
+// initilize and start the timer for the current question
+const startTimer = () => {
+    timer = setInterval(() =>{
+        currentTime--;
+        timerDisplay.textContent = `${currentTime}s`;
+
+        if(currentTime<=0){
+            clearInterval(timer);
+            highlightCorrectAnswer();
+
+            // disable all answer options after one option selected
+            answerOptions.querySelectorAll(".answer").forEach(option => option.style.pointerEvents = "none");
+            nextQuestionBtn.style.visibility = "visible";
+        }
+    }, 1000);
+}
 
 const getRandomQuestion= ()=>{
 
     // Show result if all questions have been used
     if(questionIndexHistory.length>= Math.min(questions.length, numberOfQuestions)){
-        return console.log("quizz completed !")
+        return showQuizzResult();
 
     }
     // filter the question already ansked
@@ -29,24 +70,25 @@ const getRandomQuestion= ()=>{
 const highlightCorrectAnswer = () =>{
     const correctOption = answerOptions.querySelectorAll('.answer')[currentQuestion.correctAnswer];
     correctOption.classList.add('correct');
-    const iconHTML = '<span class="material-icons" style="font-size:20px;">check_circle </span>';
+    const iconHTML = '<span class="material-icons" style="font-size:18px;">check_circle </span>';
     correctOption.insertAdjacentHTML("beforeend", iconHTML);
 }
 
 // handle user's answer
 const handleAnswer = (option, answerIndex) =>{
+    clearInterval(timer);
+
     const isCorrect = currentQuestion.correctAnswer === answerIndex;
     option.classList.add(isCorrect ? 'correct' : 'incorrect');
 
-    !isCorrect ? highlightCorrectAnswer():"";
+    !isCorrect ? highlightCorrectAnswer():correctAnswerCount++;
 
     // insert icon based on correctness
-    const iconHTML = `<span class="material-icons" style="font-size:20px;">${isCorrect ? 'check_circle' : 'cancel'}</span>`;
+    const iconHTML = `<span class="material-icons" style="font-size:18px;">${isCorrect ? 'check_circle' : 'cancel'}</span>`;
     option.insertAdjacentHTML("beforeend", iconHTML);
 
     // disable all answer options after one option selected
     answerOptions.querySelectorAll(".answer").forEach(option => option.style.pointerEvents = "none");
-
     nextQuestionBtn.style.visibility = "visible";
 }
 
@@ -55,6 +97,9 @@ const renderQuestion = () =>{
     currentQuestion = getRandomQuestion();
     if(!currentQuestion)return;
     console.log(currentQuestion);
+
+    resetTimer();
+    startTimer();
 
     // update the user interface
     answerOptions.innerHTML = "";
@@ -73,6 +118,22 @@ const renderQuestion = () =>{
     })
 }
 
-renderQuestion();
+
+const startQuiz =()=>{
+    beginContainer.style.display = "none";
+    quizzContainer.style.display = "block";
+
+    renderQuestion();
+}
+// reset the quizz and return to the start container
+const resetQuiz = () =>{
+    resetTimer();
+    correctAnswerCount = 0;
+    questionIndexHistory.length = 0;
+    beginContainer.style.display = "flex";
+    resultContainer.style.display = "none";
+}
 
 nextQuestionBtn.addEventListener("click",renderQuestion);
+document.querySelector(".try-again").addEventListener("click", resetQuiz);
+document.querySelector(".start-quizz-btn").addEventListener("click", startQuiz);

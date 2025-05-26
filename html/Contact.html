@@ -8,7 +8,7 @@
     </head>
     
     <body>
-        <div class="animated-background">
+        <div class="animated-background contact">
             <header>
                 <nav>
                 <a href="./Home.html" id="logo" class="home"></a>
@@ -30,17 +30,21 @@
             </header>
 
             <video autoplay muted loop src ="../video/oceanfloor.mp4"></video>
+            <div class = "form-container">
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    
+                    <h1 class="ContactUs">Contact Us</h1>
+                    <input type="hidden" name="access_key" value="e843c9b1-dba9-4276-9a08-fe8adba3cb22">
+                    
+                    <input type="text" name="name" placeholder="Name *" class="user-info" required />
+                    <input type="email" name="email" placeholder="Email *" class="user-info" required />
 
-            <form class="form-container">
-                <h1 class="ContactUs">Contact Us</h1>
-                <div class="form-row">
-                    <input type="text" placeholder="Name *" class="user-info" required/>
-                    <input type="email" placeholder="Email *" class="user-info" required/>
-                </div>
+                    <textarea name="message" placeholder="Message" class="msg" required></textarea>
 
-                <textarea placeholder="Message" class="msg" required></textarea>
-                <button type="submit" class="submit-btn">Send</button>
-            </form>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+            
             
 
         </div>
