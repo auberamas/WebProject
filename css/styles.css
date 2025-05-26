@@ -596,4 +596,10 @@ textarea.msg,  .submit-btn {
     border-color: rgb(236, 118, 34);
 }
 
+/* -----MAP -----------*/
 
+#map {
+  height: 500px;
+  width: 100%;
+  margin: 20px auto;
+}

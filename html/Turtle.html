@@ -5,7 +5,7 @@
         <title> Turtle </title>
         <link rel= "stylesheet" href="../css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="../js/script.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     </head>
     
     <body>
@@ -36,29 +36,37 @@
             </div>
         </div>
         
-         <div class="text-container">
-                <section>
-                    <h1>Marine Life today</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate saepe quas nam voluptates animi ab, 
-                        quam voluptatum, eligendi exercitationem, sunt voluptatem molestiae fugiat? Nostrum deleniti voluptas quia temporibus asperiores.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Adipisci, eveniet perferendis cupiditate laudantium odit nisi quia vero quas assumenda possimus autem at id saepe, excepturi ab maxime, libero quis quos!
-                    </p>
-                </section>
-                <section>
-                    <h2>lkk</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate saepe quas nam voluptates animi ab, 
-                        quam voluptatum, eligendi exercitationem, sunt voluptatem molestiae fugiat? Nostrum deleniti voluptas quia temporibus asperiores.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Adipisci, eveniet perferendis cupiditate laudantium odit nisi quia vero quas assumenda possimus autem at id saepe, excepturi ab maxime, libero quis quos!
-                    </p>
+        <div class="text-container">
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate saepe quas nam voluptates animi ab, 
-                        quam voluptatum, eligendi exercitationem, sunt voluptatem molestiae fugiat? Nostrum deleniti voluptas quia temporibus asperiores.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Adipisci, eveniet perferendis cupiditate laudantium odit nisi quia vero quas assumenda possimus autem at id saepe, excepturi ab maxime, libero quis quos!
-                    </p>
-                </section>
+            <section>
+                <h1>Marine Life today</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate saepe quas nam voluptates animi ab, 
+                    quam voluptatum, eligendi exercitationem, sunt voluptatem molestiae fugiat? Nostrum deleniti voluptas quia temporibus asperiores.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Adipisci, eveniet perferendis cupiditate laudantium odit nisi quia vero quas assumenda possimus autem at id saepe, excepturi ab maxime, libero quis quos!
+                </p>
+            </section>
+            <section>
+                <h2>lkk</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate saepe quas nam voluptates animi ab, 
+                    quam voluptatum, eligendi exercitationem, sunt voluptatem molestiae fugiat? Nostrum deleniti voluptas quia temporibus asperiores.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Adipisci, eveniet perferendis cupiditate laudantium odit nisi quia vero quas assumenda possimus autem at id saepe, excepturi ab maxime, libero quis quos!
+                </p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate saepe quas nam voluptates animi ab, 
+                    quam voluptatum, eligendi exercitationem, sunt voluptatem molestiae fugiat? Nostrum deleniti voluptas quia temporibus asperiores.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Adipisci, eveniet perferendis cupiditate laudantium odit nisi quia vero quas assumenda possimus autem at id saepe, excepturi ab maxime, libero quis quos!
+                </p>
+            </section>
+
+            <div id="map"></div>
+            
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script src="../js/map_script.js"></script>
+            
+            
                 
         </div>
 
@@ -66,7 +74,6 @@
             ©️2025 Sophie Jaffal & Aube Ramassamy<br>
             All rights reserved.
         </footer>
-        <script type="text/javascript" src="../js/script.js"></script>
 
     </body>
 
