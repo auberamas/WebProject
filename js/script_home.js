@@ -72,3 +72,40 @@ window.addEventListener('scroll', () => {
 
 
 
+
+//-------------------block appearance-------------------
+
+/*let visible = false;
+
+function move() {
+    const leftblocs = document.querySelectorAll('.left-laml');
+    const rightblocs = document.querySelectorAll('.right-laml');
+    
+     if (visible) {
+        // Hidde the blocs
+        leftblocs.forEach(bloc => bloc.classList.add('left-laml') = '-50%');
+        rightblocs.forEach(bloc => bloc.classList.add('right-laml') = '-50%');
+        visible = false;
+
+    } else {
+        // Make the blocs visible
+        leftblocs.forEach(bloc => bloc.style.left = '0');
+        rightblocs.forEach(bloc => bloc.style.right = '0');
+        visible = true;
+    }
+    
+}
+
+window.addEventListener('DOMContentLoaded', move);*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const leftblocs = document.querySelectorAll('.left-laml');
+    const rightblocs = document.querySelectorAll('.right-laml');
+
+    
+    setTimeout(() => {
+        leftblocs.forEach(bloc => bloc.classList.add('visible'));
+        rightblocs.forEach(bloc => bloc.classList.add('visible'));
+    }, 100); 
+});
+

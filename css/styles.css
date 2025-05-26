@@ -312,8 +312,11 @@ textarea.msg,  .submit-btn {
 /*--------------- Learn pages -----------------------------------*/
 
 .text-container{
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: url('../img/oceansand.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .text-container>*{
@@ -351,6 +354,75 @@ textarea.msg,  .submit-btn {
 
 .text-container section{
     margin:10px 0;
+}
+
+.box1{
+    background-color: rgba(125, 187, 234, 0.858);
+    margin:auto;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.box2{
+    background-color: rgba(125, 187, 234, 0.858);
+    margin:auto;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#lamlTitle-2{
+    text-align: center;
+    color:rgb(10, 79, 82) ;
+}
+
+#lamlTitle-2:visited{
+    color:rgb(243, 151, 23) ;
+    text-decoration: none;
+}
+
+.four-blocs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#flex1, #flex2 {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    
+}
+#flex1>*, #flex2>* {
+    background-color: rgba(125, 187, 234, 0.729);
+    margin: 20px;  
+    padding: 10px; 
+    border-radius: 25px;
+    flex-basis: 100%;
+}
+
+.left-laml, .right-laml {
+    position: relative;
+    transition: all 1s ease-in-out;
+    opacity: 1;
+}
+
+.left-laml {
+    left: -1vw;
+}
+
+.right-laml {
+    right: -1vw;
+}
+
+.left-laml.visible{
+    left : 0;
+    opacity: 1;
+}
+
+.right-laml.visible{
+    right : 0;
+    opacity: 1;
 }
 
 
