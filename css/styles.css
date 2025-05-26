@@ -598,8 +598,46 @@ textarea.msg,  .submit-btn {
 
 /* -----MAP -----------*/
 
+.about-us-bg{
+    background-image: url('../img/oceansand.jpg');
+}
+
 #map {
   height: 500px;
   width: 100%;
   margin: 20px auto;
+}
+
+/*------ about us -----*/
+.about-us {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    line-height: 1.6;
+    background-color: #eefdffd2;
+}
+
+.about-us h1, .about-us h2 {
+    color: #006994;
+}
+
+.about-us ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-us ul li::before {
+    content: "🌿 ";
+    margin-right: 0.5em;
+}
+
+.fish-link {
+    background-image: url('../img/fish.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+    animation: pulse 0.9s infinite;
 }

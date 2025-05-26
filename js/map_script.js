@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // call iNaturalist API to get observations
-fetch('https://api.inaturalist.org/v1/observations?taxon_name=Caouanne&order=desc&order_by=created_at')
+fetch('https://api.inaturalist.org/v1/observations?taxon_id=39665&order=desc&order_by=created_at')
   .then(res => res.json())
   .then(data => {
     data.results.forEach(obs => {
