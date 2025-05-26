@@ -314,7 +314,8 @@ textarea.msg,  .submit-btn {
 .text-container{
     padding-left: 10%;
     padding-right: 10%;
-    background-image: url('../img/oceansand.jpg');
+    /*background-image: url('../img/oceansand.jpg');*/
+    background-color:white ;
     background-size: cover;
     background-position: center;
 }
@@ -335,7 +336,8 @@ textarea.msg,  .submit-btn {
     color:rgb(224, 235, 244);
     margin-left: 100px;
     padding-top:10px;
-}background-color: rgb(163, 195, 223);
+    /*background-color: rgb(163, 195, 223);*/
+}
 
 .LAML-title h1{
     font-size: 80px;
@@ -424,6 +426,19 @@ textarea.msg,  .submit-btn {
     right : 0;
     opacity: 1;
 }
+
+
+section  image_left{
+    border-radius: 20px;
+    float: left;
+    margin-left: 20px;
+}
+
+.image_right{
+    float: right;
+    border-radius: 20px;
+}
+
 
 
 
