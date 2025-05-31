@@ -647,20 +647,32 @@ section  image_left{
     margin-right: 0.5em;
 }
 
-.fish-link {
-    background-image: url('../img/fish.png');
+.link-media a>* {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 150px;
+    width: 50px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 10px;
     animation: pulse 0.9s infinite;
 }
+
 /*aligne les deux elements dans .link1*/
-.link1 {
+.link-media {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20%;
+}
+
+.team :nth-child(3){
+    text-align: center;
+    color: rgb(66, 66, 127);
+}
+
+.insta{
+    background: url('../img/insta.png') no-repeat center;
+}
+.git{
+    background: url('../img/git.png') no-repeat center;
 }
