@@ -1,5 +1,11 @@
+
 // Initialize the map
-const map = L.map('map').setView([40,10], 2);
+const map = L.map('map', { minZoom: 2}).setView([40, 10], 2);
+map.setMaxBounds([
+  [-85, -180], // sud-ouest : presque pôle Sud, extrême ouest
+  [85, 180]    // nord-est : presque pôle Nord, extrême est
+]);
+
 
 // Map from Leaflet
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -12,6 +18,7 @@ fetch('https://api.inaturalist.org/v1/observations?taxon_id=39665&order=desc&ord
   .then(data => {
     data.results.forEach(obs => {
       if (obs.geojson) {
+        console.log(obs);
         const lat = obs.geojson.coordinates[1];
         const lng = obs.geojson.coordinates[0];
         const title = obs.species_guess || "Observation";
@@ -20,7 +27,7 @@ fetch('https://api.inaturalist.org/v1/observations?taxon_id=39665&order=desc&ord
 
         L.marker([lat, lng])
           .addTo(map)
-          .bindPopup(`<b>${title}</b><br>par ${user}<br>${date}`);
+          .bindPopup(`<b>${title}</b><br>par ${user}<br>${date}<br><a href="${obs.uri}" target="_blank" rel="noopener noreferrer">View on iNaturalist</a>`);
       }
     });
   })

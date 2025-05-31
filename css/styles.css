@@ -147,9 +147,10 @@ a{
     overflow-x: hidden;
 }
 
-.bloc:hover p, .bloc:hover h3{
-    color:rgb(230, 148, 61);
+.bloc.text:hover p, .bloc.text:hover h3{
+    color: rgb(66, 66, 127); 
 }
+
 
 .bloc {
   width: 50%;
@@ -166,7 +167,11 @@ a{
 
 .bloc p, .bloc h3{
     text-align: justify;
-    color: rgb(66, 66, 127); 
+    color: rgb(37, 35, 77)
+}
+
+.bloc.text p, .bloc.text h3{
+    padding :10px;
 }
 
 /*to hide blocs*/
@@ -206,7 +211,7 @@ a{
 }
 
 #imgcoral p, #imgjellyfish p, #imgturtle p{
-    color: black;
+    color: rgb(66, 66, 127); 
     font-size: 24px;
     padding: 20px;
     width: 100%;
@@ -439,9 +444,6 @@ section  image_left{
     border-radius: 20px;
 }
 
-
-
-
 /*----- Quizz----------------------------*/
 
 @keyframes pulse {
@@ -465,7 +467,6 @@ section  image_left{
 .img-quizz.end{
     background-image: url('../img/happy_fish.gif');
 }
-
 
 .img-quizz{
     background-image: url('../img/jellyfish1.jpg');
@@ -627,11 +628,11 @@ section  image_left{
 .about-us {
     max-width: 800px;
     margin: auto;
-    padding: 2rem;
+    padding: 40px;
     line-height: 1.6;
     background-color: #eefdffd2;
 }
-
+    
 .about-us h1, .about-us h2 {
     color: #006994;
 }
@@ -655,4 +656,11 @@ section  image_left{
     height: 100px;
     margin-top: 20px;
     animation: pulse 0.9s infinite;
+}
+/*aligne les deux elements dans .link1*/
+.link1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
