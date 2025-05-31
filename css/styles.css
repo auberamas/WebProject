@@ -81,7 +81,7 @@ a{
 }
 
 #logo{
-    background-image: url('../img/logo_blue_png_without.png');
+    background-image: url('../img/logo_blue_png_without.png'); 
 }
 
 #logo:hover {
@@ -135,7 +135,7 @@ a{
 }
 
 .home{
-    background-image: url('../img/oceansand.jpg');
+    background-image: url('../img/oceansand.jpg');/*royalty free : from pexel.com*/
     background-size: cover;
     background-position: center;
 }
@@ -207,7 +207,7 @@ a{
 }
 
 #imgcoral{
-    background-image: url('../img/coral.jpg');
+    background-image: url('../img/coral.jpg');/*royalty free : from pexel.com*/
 }
 
 #imgcoral p, #imgjellyfish p, #imgturtle p{
@@ -235,11 +235,11 @@ a{
 }
 
 #imgjellyfish{
-    background-image: url('../img/jellyfish2.jpg');
+    background-image: url('../img/jellyfish2.jpg');/*royalty free : from pexel.com*/
 }
 
 #imgturtle{
-    background-image: url('../img/turtle.jpg');
+    background-image: url('../img/turtle.jpg');/*royalty free : from pexel.com*/
 }
 
 
@@ -319,7 +319,7 @@ textarea.msg,  .submit-btn {
 .text-container{
     padding-left: 10%;
     padding-right: 10%;
-    /*background-image: url('../img/oceansand.jpg');*/
+    /*background-image: url('../img/oceansand.jpg');*//*royalty free : from pexel.com*/
     background-color:white ;
     background-size: cover;
     background-position: center;
@@ -462,14 +462,14 @@ section  image_left{
 }
 
 .img-quizz.start{
-    background-image: url('../img/jellyfish1.jpg');
+    background-image: url('../img/jellyfish1.jpg');/*royalty free : from pexel.com*/
 }
 .img-quizz.end{
-    background-image: url('../img/happy_fish.gif');
+    background-image: url('../img/happy_fish.gif');/*royalty free : from pexel.com*/
 }
 
 .img-quizz{
-    background-image: url('../img/jellyfish1.jpg');
+    background-image: url('../img/jellyfish1.jpg');/*royalty free : from pexel.com*/
     background-size: cover;
     height: 200px;
     width: 200px;
@@ -615,7 +615,7 @@ section  image_left{
 /* -----MAP -----------*/
 
 .about-us-bg{
-    background-image: url('../img/oceansand.jpg');
+    background-image: url('../img/oceansand.jpg');/*royalty free : from pexel.com*/
 }
 
 #map {
@@ -671,8 +671,8 @@ section  image_left{
 }
 
 .insta{
-    background: url('../img/insta.png') no-repeat center;
+    background: url('../img/insta.png') no-repeat center;/*icon from https://www.iconfinder.com/social-media-icons*/
 }
 .git{
-    background: url('../img/git.png') no-repeat center;
+    background: url('../img/git.png') no-repeat center; /*icon from https://www.iconfinder.com/social-media-icons*/
 }
