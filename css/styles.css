@@ -352,11 +352,14 @@ textarea.msg,  .submit-btn {
     margin-top:10px;
     margin-bottom: 10px;
     font-size: 20px;
-    color:rgb(66, 66, 127);
+    color:rgb(10, 79, 82);
+    text-align: center;
 }
 
 .text-container h3{
     margin:5px 0;
+    text-align: center;
+    color:rgb(0, 0, 0) ;
 }
 
 .text-container section{
@@ -370,29 +373,17 @@ textarea.msg,  .submit-btn {
     border-radius: 25px;
 }
 
-.box2{
-    background-color: rgba(125, 187, 234, 0.858);
-    margin:auto;
-    padding: 20px;
-    border-radius: 25px;
-}
 
-#lamlTitle-2{
-    text-align: center;
-    color:rgb(10, 79, 82) ;
-}
 
-#lamlTitle-2:visited{
+
+/*#lamlTitle-2:visited{
     color:rgb(243, 151, 23) ;
     text-decoration: none;
-}
+}*/
 
-.four-blocs {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 
+
+/*------------------First Try Blocs LAML------------------------------
 
 #flex1, #flex2 {
     display: flex;
@@ -442,6 +433,156 @@ section  image_left{
 .image_right{
     float: right;
     border-radius: 20px;
+}
+*/
+
+.blocs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.laml-blocs{
+    flex: 1 1 45%;
+    padding: 20px;
+    background-color: rgba(125, 187, 234, 0.729);
+    text-align: justify;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.blocs img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/*.lamlTitle-3{
+    text-align: center;
+}*/
+
+a:link {
+    color: rgb(10, 79, 82);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited{
+    color: rgb(10, 79, 82);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgba(45,172,172,255);
+    background-color: transparent;
+    text-decoration: dotted;
+}
+
+.blocs a:link {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.blocs a:visited{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.blocs a:hover{
+    color: rgba(45,172,172,255);
+    background-color: transparent;
+    text-decoration: dotted;
+}
+
+/*--------Coral---------*/
+
+
+
+
+
+.video-section{
+    flex: 1 1 45%;
+    background-color: rgba(160,205,240,255); 
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; 
+    max-width: fit-content;
+    margin: 0 auto; 
+    text-align: justify;
+    border-radius: 20px;
+}
+
+
+
+/*----------------Cards-----------------*/
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px 0;
+}
+
+.card-container{
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    
+}
+
+.card{
+    /*position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;*/
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.front{
+    
+    background-color: #006994;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(125, 187, 234);
+    transform: rotateY(0deg);
+}
+
+.back{
+    background-color:rgba(125, 187, 234, 0.729) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #006994;
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card{
+    transform: rotateY(180deg);
+
 }
 
 /*----- Quizz----------------------------*/
