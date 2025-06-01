@@ -875,7 +875,7 @@ section  image_left{
     background-color: #eefdffd2;
 }
     
-.about-us h1, .about-us h2 {
+.about-us h1, .about-us h2, footer a {
     color: #006994;
 }
 
