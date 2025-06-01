@@ -2,6 +2,7 @@
 
 window.addEventListener("DOMContentLoaded", () => {
     const title = document.querySelector(".main-title");
+    if (!title) return; // Exit if the title element is not found
     const fullText = title.textContent;
     const table = fullText.split("|"); // ["BLUE", "Bringing Life to Underwater Ecosystems"]
     const container = title;
@@ -70,33 +71,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
-
-
 //-------------------block appearance-------------------
-
-/*let visible = false;
-
-function move() {
-    const leftblocs = document.querySelectorAll('.left-laml');
-    const rightblocs = document.querySelectorAll('.right-laml');
-    
-     if (visible) {
-        // Hidde the blocs
-        leftblocs.forEach(bloc => bloc.classList.add('left-laml') = '-50%');
-        rightblocs.forEach(bloc => bloc.classList.add('right-laml') = '-50%');
-        visible = false;
-
-    } else {
-        // Make the blocs visible
-        leftblocs.forEach(bloc => bloc.style.left = '0');
-        rightblocs.forEach(bloc => bloc.style.right = '0');
-        visible = true;
-    }
-    
-}
-
-window.addEventListener('DOMContentLoaded', move);*/
 
 document.addEventListener("DOMContentLoaded", () => {
     const leftblocs = document.querySelectorAll('.left-laml');
@@ -109,3 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100); 
 });
 
+// -------------------Screen adaptation-------------------
+
+const toggleButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.right-links');
+
+toggleButton.addEventListener('click', () => {
+navLinks.classList.toggle('show');
+});

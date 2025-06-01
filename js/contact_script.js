@@ -19,7 +19,8 @@ if(trigger && target){
 // ------ send and clear the form --------------------
 const form = document.getElementById("form");
 
-form.addEventListener("submit", (e) => {
+if(form){
+  form.addEventListener("submit", (e) => {
   e.preventDefault(); // prevent auto reload
 
   // send HTTP request
@@ -38,3 +39,5 @@ form.addEventListener("submit", (e) => {
     alert("Error sending message.");
   });
 });
+}
+
