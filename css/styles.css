@@ -794,11 +794,6 @@ textarea.msg,  .submit-btn {
 }
 
 /* -----MAP -----------*/
-
-.about-us-bg{
-    background-image: url('../img/oceansand.jpg');/*royalty free : from pexel.com*/
-}
-
 #map {
   height: 500px;
   width: 100%;
@@ -806,6 +801,10 @@ textarea.msg,  .submit-btn {
 }
 
 /*------ about us -----*/
+.about-us-bg{
+    background-image: url('../img/oceansand.jpg');/*royalty free : from pexel.com*/
+}
+
 .about-us {
     max-width: 800px;
     margin: auto;
