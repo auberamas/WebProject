@@ -28,7 +28,7 @@ footer{
 .right-links {
   display: flex;
   gap: 20px;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
 nav a, #topics li a{
@@ -78,14 +78,14 @@ a{
     height: 40px;
     background-size: cover;
     filter: drop-shadow(3px 1px 4px rgba(0,0,0,0.2));
-    background-image: url('../img/logo_blue_png_without.png'); 
+    background-image: url('../img/logo_blue_png_without.png'); /*royalty free : from pexel.com*/
     background-repeat: no-repeat;
 }
 
     
 
 #logo:hover {
-    background-image: url('../img/logo_blue_without_inverse.png');
+    background-image: url('../img/logo_blue_without_inverse.png');/*royalty free : from pexel.com*/
 }
 
 /*---------- Video background -------------------------------------------------------*/
@@ -192,12 +192,6 @@ a{
   right: 0;
 }
 
-/*
-.active{
-    opacity: 1;
-    transform: scale(1);
-}*/
-
 .img{
     background-size: cover;
     background-position: center;
@@ -230,7 +224,6 @@ a{
 #imgcoral:hover p, #imgjellyfish:hover p, #imgturtle:hover p{
     opacity: 1;
     background-color: rgba(134, 184, 248, 0.52);
-    padding: auto;
     z-index: 1;
 }
 
@@ -319,7 +312,6 @@ textarea.msg,  .submit-btn {
 .text-container{
     padding-left: 10%;
     padding-right: 10%;
-    /*background-image: url('../img/oceansand.jpg');*//*royalty free : from pexel.com*/
     background-color:white ;
     background-size: cover;
     background-position: center;
@@ -380,68 +372,6 @@ textarea.msg,  .submit-btn {
 }
 
 
-
-
-/*#lamlTitle-2:visited{
-    color:rgb(243, 151, 23) ;
-    text-decoration: none;
-}*/
-
-
-
-/*------------------First Try Blocs LAML------------------------------
-
-#flex1, #flex2 {
-    display: flex;
-    padding: 20px;
-    text-align: center;
-    
-}
-#flex1>*, #flex2>* {
-    background-color: rgba(125, 187, 234, 0.729);
-    margin: 20px;  
-    padding: 10px; 
-    border-radius: 25px;
-    flex-basis: 100%;
-}
-
-.left-laml, .right-laml {
-    position: relative;
-    transition: all 1s ease-in-out;
-    opacity: 1;
-}
-
-.left-laml {
-    left: -1vw;
-}
-
-.right-laml {
-    right: -1vw;
-}
-
-.left-laml.visible{
-    left : 0;
-    opacity: 1;
-}
-
-.right-laml.visible{
-    right : 0;
-    opacity: 1;
-}
-
-
-section  image_left{
-    border-radius: 20px;
-    float: left;
-    margin-left: 20px;
-}
-
-.image_right{
-    float: right;
-    border-radius: 20px;
-}
-*/
-
 .blocs {
     display: flex;
     flex-wrap: wrap;
@@ -478,10 +408,6 @@ section  image_left{
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-/*.lamlTitle-3{
-    text-align: center;
-}*/
 
 .text-container a:link {
     color: rgb(10, 79, 82);
@@ -643,7 +569,7 @@ section  image_left{
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 50px 0;
+    margin-top: 50px 0px;
 }
 
 .card-container{
