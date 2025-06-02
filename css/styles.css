@@ -78,14 +78,12 @@ a{
     height: 40px;
     background-size: cover;
     filter: drop-shadow(3px 1px 4px rgba(0,0,0,0.2));
-    background-image: url('../img/logo_blue_png_without.png'); /*royalty free : from pexel.com*/
+    background-image: url('../img/logo_blue_without_inverse.png'); /*royalty free : from pexel.com*/
     background-repeat: no-repeat;
 }
 
-
-
 #logo:hover {
-    background-image: url('../img/logo_blue_without_inverse.png');/*royalty free : from pexel.com*/
+    background-image: url('../img/logo_blue_without.png');/*royalty free : from pexel.com*/
 }
 
 /*---------- Video background -------------------------------------------------------*/
@@ -560,8 +558,6 @@ textarea.msg,  .submit-btn {
     text-align: justify;
     border-radius: 20px;
 }
-
-
 
 /*----------------Cards-----------------*/
 
