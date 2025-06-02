@@ -134,7 +134,7 @@ a{
 }
 
 .home{
-    background-image: url('../img/oceansand.jpg');/*royalty free : from pexel.com*/
+    background-image: url('../img/oceansand.png');/*royalty free : from pexel.com*/
     background-size: cover;
     background-position: center;
 }
@@ -794,6 +794,7 @@ textarea.msg,  .submit-btn {
 }
 
 /* -----MAP -----------*/
+
 #map {
   height: 500px;
   width: 100%;
@@ -802,9 +803,9 @@ textarea.msg,  .submit-btn {
 
 /*------ about us -----*/
 .about-us-bg{
-    background-image: url('../img/oceansand.jpg');/*royalty free : from pexel.com*/
+    background-image: url('../img/oceansand.png');/*royalty free : from pexel.com*/
+    background-size: 4000px;
 }
-
 .about-us {
     max-width: 800px;
     margin: auto;
