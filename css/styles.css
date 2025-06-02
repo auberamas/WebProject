@@ -456,6 +456,13 @@ section  image_left{
     text-align: justify;
     border: 1px solid #ccc;
     border-radius: 20px;
+    align-items: center;
+    align-content: center;
+}
+
+.laml-blocs p, .laml-blocs h2{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .laml-blocs p {
@@ -543,6 +550,15 @@ section  image_left{
     margin: 0 auto; 
     text-align: justify;
     border-radius: 20px;
+}
+
+.videos{
+    display: flex;
+    justify-items: center;
+    flex-wrap : wrap;
+    justify-content: center;
+    gap:20px;
+
 }
 
 
