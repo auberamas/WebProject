@@ -1,10 +1,10 @@
-const beginContainer = document.querySelector(".begin-quizz");
-const quizzContainer = document.querySelector(".quizz-content");
+const beginContainer = document.querySelector(".begin-quiz");
+const quizContainer = document.querySelector(".quiz-content");
 const answerOptions = document.querySelector(".answer-options");
 const nextQuestionBtn = document.querySelector(".next-question");
 const questionStatus = document.querySelector(".question-status");
 const timerDisplay = document.querySelector(".time-duration");
-const resultContainer = document.querySelector(".end-quizz");
+const resultContainer = document.querySelector(".end-quiz");
 
 const QUIZ_TIME_LIMIT = 5;
 let currentTime = QUIZ_TIME_LIMIT;
@@ -14,9 +14,9 @@ let numberOfQuestions = 10;
 const questionIndexHistory=[];
 let correctAnswerCount = 0;
 
-// display the quizz result and hide the quizz container
-const showQuizzResult = () =>{
-    quizzContainer.style.display = "none";
+// display the quiz result and hide the quiz container
+const showquizResult = () =>{
+    quizContainer.style.display = "none";
     resultContainer.style.display = "flex";
 
     const resultMessage = `You got <b>${correctAnswerCount}</b> good answers over <b>${numberOfQuestions} ! </b>`;
@@ -51,7 +51,7 @@ const getRandomQuestion= ()=>{
 
     // Show result if all questions have been used
     if(questionIndexHistory.length>= Math.min(questions.length, numberOfQuestions)){
-        return showQuizzResult();
+        return showquizResult();
 
     }
     // filter the question already ansked
@@ -121,11 +121,11 @@ const renderQuestion = () =>{
 
 const startQuiz =()=>{
     beginContainer.style.display = "none";
-    quizzContainer.style.display = "block";
+    quizContainer.style.display = "block";
 
     renderQuestion();
 }
-// reset the quizz and return to the start container
+// reset the quiz and return to the start container
 const resetQuiz = () =>{
     resetTimer();
     correctAnswerCount = 0;
@@ -136,4 +136,4 @@ const resetQuiz = () =>{
 
 nextQuestionBtn.addEventListener("click",renderQuestion);
 document.querySelector(".try-again").addEventListener("click", resetQuiz);
-document.querySelector(".start-quizz-btn").addEventListener("click", startQuiz);
+document.querySelector(".start-quiz-btn").addEventListener("click", startQuiz);

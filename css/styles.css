@@ -82,7 +82,7 @@ a{
     background-repeat: no-repeat;
 }
 
-    
+
 
 #logo:hover {
     background-image: url('../img/logo_blue_without_inverse.png');/*royalty free : from pexel.com*/
@@ -569,7 +569,7 @@ textarea.msg,  .submit-btn {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 50px 0px;
+    margin-top: 50px;
 }
 
 .card-container{
@@ -628,7 +628,7 @@ textarea.msg,  .submit-btn {
 
 }
 
-/*----- Quizz----------------------------*/
+/*----- quiz----------------------------*/
 
 @keyframes pulse {
   0%   { transform: scale(1); }
@@ -637,22 +637,22 @@ textarea.msg,  .submit-btn {
   100% { transform: scale(1); }
 }
 
-.start-quizz-btn {
+.start-quiz-btn {
   animation: pulse 0.9s infinite;
 }
 
-.quizz-page{
+.quiz-page{
     background-color: rgb(163, 195, 223);
 }
 
-.img-quizz.start{
-    background-image: url('../img/jellyfish1.jpg');/*royalty free : from pexel.com*/
+.img-quiz.start{
+    background-image: url('../img/jellyfish1.jpg');/*https://giphy.com/pikaole*/
 }
-.img-quizz.end{
+.img-quiz.end{
     background-image: url('../img/happy_fish.gif');/*royalty free : from pexel.com*/
 }
 
-.img-quizz{
+.img-quiz{
     background-image: url('../img/jellyfish1.jpg');/*royalty free : from pexel.com*/
     background-size: cover;
     height: 200px;
@@ -660,7 +660,7 @@ textarea.msg,  .submit-btn {
     box-sizing: content-box;
 }
 
-.quizz{
+.quiz{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -676,29 +676,29 @@ textarea.msg,  .submit-btn {
     background-color: rgb(255, 255, 255)
 }
 
-.container.quizz-content{
+.container.quiz-content{
     width: 460px;
     height: 490px;
 }
 
-.begin-quizz, .end-quizz{
+.begin-quiz, .end-quiz{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.end-quizz, .quizz-content{
+.end-quiz, .quiz-content{
     display: none;
 }
 
 
-.begin-quizz>*, .end-quizz>*{
+.begin-quiz>*, .end-quiz>*{
     margin:10px;
 }
 
 
-.quizz-header{
+.quiz-header{
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -707,12 +707,12 @@ textarea.msg,  .submit-btn {
     height: 50px;
 }
 
-.quizz-header .quizz-title{
+.quiz-header .quiz-title{
     font-size: 1.43em;
     font-weight: 1000;
 }
 
-.quizz-header .timer{
+.quiz-header .timer{
     display: flex;
     background-color:aliceblue;
     border: 1px solid rgb(163, 195, 223);
@@ -758,7 +758,7 @@ textarea.msg,  .submit-btn {
 }
 
 
-.quizz-footer{
+.quiz-footer{
     padding: 20px 25px;
     display: flex;
     align-items: center;
@@ -766,7 +766,7 @@ textarea.msg,  .submit-btn {
     border-top: 1px solid rgba(128, 128, 128, 0.638) ;
 }
 
-.next-question, .try-again, .start-quizz-btn{
+.next-question, .try-again, .start-quiz-btn{
     display:inline-flex;
     gap:4px;
     align-items: center;
@@ -780,7 +780,7 @@ textarea.msg,  .submit-btn {
     visibility: hidden;
 }
 
-.next-question:hover, .try-again:hover, .start-quizz-btn:hover{
+.next-question:hover, .try-again:hover, .start-quiz-btn:hover{
     background-color: rgb(118, 153, 184);
 }
 
